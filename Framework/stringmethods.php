@@ -145,6 +145,14 @@ namespace Framework{
             return $result;
         }
 
+        public static function lastIndexOf($string, $substring, $offset = null){
+            $position = strrpos($string, $substring, $offset);
+            if (!is_int($position)){
+                return -1;
+            }
+            return $position;
+        }
+
         ////////////////////
 
         private static function _normalize($pattern){
